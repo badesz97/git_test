@@ -29,4 +29,10 @@ public class Horse {
 		this.age = age;
 		this.horseSpeed = horseSpeed;
 	}
+	@Override
+	public String toString() {
+		return "Horse [name=" + name + ", age=" + age + ", horseSpeed=" + horseSpeed + "]";
+	}
+	
+	
 }
