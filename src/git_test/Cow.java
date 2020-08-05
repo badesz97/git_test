@@ -17,7 +17,7 @@ public class Cow extends Animal{
 	
 	@Override
 	public int getHealth() {
-		return 100;
+		return 150;
 	}
 	@Override
 	public void setHealth(int health) {
@@ -26,7 +26,7 @@ public class Cow extends Animal{
 	}
 	@Override
 	public int getPower() {
-		return 9;
+		return 40;
 	}
 	@Override
 	public void setPower(int power) {
