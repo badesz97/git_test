@@ -3,7 +3,7 @@ package git_test;
 
 /*
  * 
- * Change A
+ * Change C
  * 
  */
 public class Program {
