@@ -9,8 +9,7 @@ public class Program {
 		if (hungry.equals("yes")) {
 			System.out.println("Eat something!");
 		} else {
-			System.out.println("Do some workout!");
+			System.out.println("Do some workout right now bitch!");
 		}
 	}
-
 }
