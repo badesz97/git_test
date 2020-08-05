@@ -12,10 +12,13 @@ public class Program {
 
 		String hungry = "yes";
 		
+		String hungry2 = "no";
+		
 		if (hungry.equals("yes")) {
 			System.out.println("Eat something now!");
 		} else {
 			System.out.println("Do some workout right now bitch!");
+			System.out.println(hungry2.toString());
 		}
 	}
 }
