@@ -2,7 +2,8 @@ package git_test;
 
 public abstract class Animal {
 
-	public boolean isDead = false;
+	public boolean isDead;
+	
 	public abstract void setIsDead(boolean value);
 	
 	public String getName;
@@ -22,7 +23,7 @@ public abstract class Animal {
 	}
 	
 	public void loseHealth(int power) {
-		if (getHealth > 0) setHealth(getHealth - power);
+		if (getHealth - power > 0) setHealth(getHealth - power);
 		else setIsDead(true);
 	}
 	
