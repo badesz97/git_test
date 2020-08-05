@@ -2,6 +2,9 @@ package git_test;
 
 public abstract class Animal {
 
+	public boolean isDead = false;
+	public abstract void setIsDead(boolean value);
+	
 	public String getName;
 	public abstract void setName(String name);
 	
@@ -14,17 +17,19 @@ public abstract class Animal {
 	public abstract void eat();
 	
 	public void attack(Animal other) {
+		
 		other.loseHealth(getPower);
 	}
 	
 	public void loseHealth(int power) {
-		setHealth(getHealth - power);
+		if (getHealth > 0) setHealth(getHealth - power);
+		else setIsDead(true);
 	}
 	
 	@Override
 	public String toString() {
-		return "Animal [getName()=" + getName + ", getHealth()=" + getHealth
-				+ ", getPower()=" + getPower + "]";
+		return "Animal [Name=" + getName + ", Health=" + getHealth
+				+ ", Power=" + getPower + "]";
 	}
 	
 	

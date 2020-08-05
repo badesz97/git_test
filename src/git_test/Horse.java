@@ -2,20 +2,17 @@ package git_test;
 
 public class Horse extends Animal{
 
-	public String getName;
 	@Override
 	public void setName(String name) {
 		this.getName = name;
 	}
 	
-	public int getHealth;
 	@Override
 	public void setHealth(int health) {
 		this.getHealth = health;
 		
 	}
 	
-	public int getPower;
 	@Override
 	public void setPower(int power) {
 		this.getPower = power;
@@ -34,5 +31,10 @@ public class Horse extends Animal{
 		
 	}
 	
+	@Override
+	public void setIsDead(boolean value) {
+		this.isDead = value;
+		
+	}
 	
 }
