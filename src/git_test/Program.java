@@ -7,7 +7,7 @@ public class Program {
 		String hungry = "yes";
 		
 		if (hungry.equals("yes")) {
-			System.out.println("Eat something!");
+			System.out.println("Eat something now!");
 		} else {
 			System.out.println("Do some workout!");
 		}
