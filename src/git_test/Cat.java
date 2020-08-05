@@ -1,26 +1,47 @@
 package git_test;
 
-public class Cat {
+public class Cat extends Animal{
 
 	private String name;
-	private String speed;
+	private int health;
+	private int power;
 	
+	@Override
 	public String getName() {
 		return name;
 	}
+	@Override
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getSpeed() {
-		return speed;
+	
+	@Override
+	public int getHealth() {
+		return 100;
 	}
-	public void setSpeed(String speed) {
-		this.speed = speed;
+	@Override
+	public void setHealth(int health) {
+		this.health = health;
+		
 	}
-	public Cat(String name, String speed) {
-		super();
+	@Override
+	public int getPower() {
+		return 9;
+	}
+	@Override
+	public void setPower(int power) {
+		this.power = power;
+		
+	}
+	public Cat(String name, int health, int power) {
 		this.name = name;
-		this.speed = speed;
+		this.health = health;
+		this.power = power;
+	}
+	@Override
+	public void eat() {
+		System.out.println("Yummy yummy milk again slurp slurp..fuck XD");
+		
 	}
 	
 	
