@@ -1,30 +1,49 @@
 package git_test;
 
-public class Cow {
-
-	private String name;
-	private String speed;
+public class Cow extends Animal{
 	
+	private String name;
+	private int health;
+	private int power;
+
+	@Override
 	public String getName() {
 		return name;
 	}
+	@Override
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getSpeed() {
-		return speed;
-	}
-	public void setSpeed(String speed) {
-		this.speed = speed;
-	}
-	public Cow(String name, String speed) {
-		this.name = name;
-		this.speed = speed;
+	
+	@Override
+	public int getHealth() {
+		return 100;
 	}
 	@Override
-	public String toString() {
-		return "Cow [name=" + name + ", speed=" + speed + "]";
+	public void setHealth(int health) {
+		this.health = health;
+		
+	}
+	@Override
+	public int getPower() {
+		return 9;
+	}
+	@Override
+	public void setPower(int power) {
+		this.power = power;
+		
 	}
 	
+	public Cow(String name, int health, int power) {
+		this.name = name;
+		this.health = health;
+		this.power = power;
+	}
+
+	@Override
+	public void eat() {
+		System.out.println("Damn this grass tastes so good...");
+		
+	}
 	
 }

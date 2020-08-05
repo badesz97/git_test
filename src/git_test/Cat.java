@@ -38,12 +38,10 @@ public class Cat extends Animal{
 		this.health = health;
 		this.power = power;
 	}
+	
 	@Override
 	public void eat() {
 		System.out.println("Yummy yummy milk again slurp slurp..fuck XD");
 		
 	}
-	
-	
-	
 }
