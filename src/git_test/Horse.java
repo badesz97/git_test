@@ -2,47 +2,35 @@ package git_test;
 
 public class Horse extends Animal{
 
-	private String name;
-	private int health;
-	private int power;
-
-	@Override
-	public String getName() {
-		return name;
-	}
+	public String getName;
 	@Override
 	public void setName(String name) {
-		this.name = name;
+		this.getName = name;
 	}
 	
-	@Override
-	public int getHealth() {
-		return 130;
-	}
+	public int getHealth;
 	@Override
 	public void setHealth(int health) {
-		this.health = health;
+		this.getHealth = health;
 		
 	}
-	@Override
-	public int getPower() {
-		return 50;
-	}
+	
+	public int getPower;
 	@Override
 	public void setPower(int power) {
-		this.power = power;
+		this.getPower = power;
 		
 	}
 	
 	public Horse(String name, int health, int power) {
-		this.name = name;
-		this.health = health;
-		this.power = power;
+		setName(name);
+		setHealth(health);
+		setPower(power);
 	}
-
+	
 	@Override
 	public void eat() {
-		System.out.println("Im just eating hay.");
+		System.out.println("Im eating hay.");
 		
 	}
 	
