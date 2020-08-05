@@ -21,4 +21,10 @@ public class Cow {
 		this.name = name;
 		this.speed = speed;
 	}
+	@Override
+	public String toString() {
+		return "Cow [name=" + name + ", speed=" + speed + "]";
+	}
+	
+	
 }
