@@ -1,7 +1,10 @@
-package git_test;
+package git_test.entities;
 
-public class Dog extends Animal{
+import git_test.abstracts.PredatorAnimal;
 
+public class Cat extends PredatorAnimal{
+	
+	
 	@Override
 	public void setName(String name) {
 		this.getName = name;
@@ -12,25 +15,24 @@ public class Dog extends Animal{
 		this.getHealth = health;
 		
 	}
-	
 	@Override
 	public void setPower(int power) {
 		this.getPower = power;
 		
 	}
 	
-	public Dog(String name, int health, int power) {
-		setName(name);
-		setHealth(health);
-		setPower(power);
+	public Cat(String name, int health, int power) {
+		this.setName(name);
+		this.setHealth(health);
+		this.setPower(power);
 	}
 	
 	@Override
 	public void eat() {
-		System.out.println("Im eating meat.");
+		System.out.println("Yummy yummy milk again slurp slurp..fuck XD");
 		
 	}
-	
+
 	@Override
 	public void setIsDead(boolean value) {
 		this.isDead = value;

@@ -1,5 +1,8 @@
 package git_test;
 
+import git_test.abstracts.Animal;
+import git_test.enums.AnimalType;
+import git_test.factories.AnimalFactory;
 
 /*
  * 
@@ -10,8 +13,8 @@ public class Program {
 
 	public static void main(String[] args) {
 
-		Animal a1 = new Dog("Rocky", 100, 21);
-		Animal a2 = new Cat("Tom", 60, 20);
+		Animal a1 = AnimalFactory.getAnimal(AnimalType.Predator, true, "Rocky", 100, 21);
+		Animal a2 = AnimalFactory.getAnimal(AnimalType.Predator, false, "Tom", 60, 20);
 		
 		gameControl(a1, a2);
 	}

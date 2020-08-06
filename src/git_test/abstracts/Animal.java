@@ -1,4 +1,4 @@
-package git_test;
+package git_test.abstracts;
 
 public abstract class Animal {
 

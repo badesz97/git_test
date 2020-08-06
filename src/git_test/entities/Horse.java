@@ -1,6 +1,8 @@
-package git_test;
+package git_test.entities;
 
-public class Horse extends Animal{
+import git_test.abstracts.VegetarianAnimal;
+
+public class Horse extends VegetarianAnimal{
 
 	@Override
 	public void setName(String name) {
