@@ -18,15 +18,16 @@ public class Program {
 
 	public static void main(String[] args) {
 
+		Company comp1 = new Company(1, "ForumDigital", "This is my company");
+		System.out.println(comp1.toString());
+		
+		
 		try {
-
-			Company comp1 = new Company(1, "ForumDigital", "This is my company");
 
 			System.out.println("Press enter for chosing a file.");
 
 			String filename = File.separator + "tmp";
 			JFileChooser fc = new JFileChooser(new File(filename));
-
 			JFrame frame = new JFrame();
 
 			// Show open dialog; this method does not return until the dialog is closed
@@ -47,5 +48,6 @@ public class Program {
 			System.out.println("An error occurred.");
 			e.printStackTrace();
 		}
+		
 	}
 }
