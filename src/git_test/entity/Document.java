@@ -12,7 +12,6 @@ public class Document {
 	private List<File> files;
 
 	public Document(int id, String name, String description) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
