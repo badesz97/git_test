@@ -8,12 +8,12 @@ public class Company {
 	private String description;
 	private Document document;
 	
-	public Company(int id, String name, String description) {
+	public Company(int id, String name, String description, Document document) {
 		
 		this.id = id;
 		this.name = name;
 		this.description = description;
-		this.document = null;
+		this.document = document;
 	}
 
 	public int getId() {

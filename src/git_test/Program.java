@@ -7,14 +7,14 @@ import java.util.Scanner;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 
-import git_test.entity.Company;
+import git_test.entity.*;
 
 
 public class Program {
 
 	public static void main(String[] args) {
 
-		Company comp1 = new Company(1, "ForumDigital", "This is my company");
+		Company comp1 = new Company(1, "ForumDigital", "This is my company", new Document(1,"Szerzodesek", "Ez egy leiras."));
 		System.out.println(comp1.toString());
 		
 		
@@ -40,6 +40,10 @@ public class Program {
 				System.out.println(data);
 			}
 			myReader.close();
+			
+			comp1.getDocument().getFiles().add(selFile);
+			
+			System.out.println(comp1.getDocument().getFiles().size());
 		} catch (FileNotFoundException e) {
 			System.out.println("An error occurred.");
 			e.printStackTrace();
