@@ -8,9 +8,6 @@ public class Person {
 	private Company company;
 	private Document document;
 	
-	
-	
-	
 	public Person(int id, String name, String description, Company company, Document document) {
 		this.id = id;
 		this.name = name;
