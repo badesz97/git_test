@@ -13,7 +13,14 @@ import git_test.entity.*;
 public class Program {
 
 	public static void main(String[] args) {
+<<<<<<< HEAD
 		Company comp1 = new Company(1, "ForumDigital", "This is my company", new Document(1,"Szerzodesek", "Ez egy leiras."));
+=======
+
+		Company comp1 = new Company(1, "ForumDigital", "This is my company", new Document(1,"Szerzodesek", "Ez egy leiras."));
+		System.out.println(comp1.toString());
+		
+>>>>>>> branch 'geri' of https://github.com/badesz97/git_test.git
 		
 		try {
 
@@ -52,6 +59,10 @@ public class Program {
 				System.out.println(data);
 			}
 			myReader.close();
+			
+			comp1.getDocument().getFiles().add(selFile);
+			
+			System.out.println(comp1.getDocument().getFiles().size());
 		} catch (FileNotFoundException e) {
 			System.out.println(e.getMessage());
 		}
