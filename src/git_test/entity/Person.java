@@ -55,6 +55,4 @@ public class Person {
 		return "Person [id=" + this.id + ", name=" + this.name + ", description=" + this.description + ", company=" + this.company + ", document="+ this.document + "]";
 	}
 
-	
-	
 }
