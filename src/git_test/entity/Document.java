@@ -1,16 +1,30 @@
 package git_test.entity;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Document {
 
 	private int id;
 	private String name;
 	private String description;
-	
+	private List<File> files;
+
 	public Document(int id, String name, String description) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
+		files = new ArrayList<File>();
+	}
+
+	public List<File> getFiles() {
+		return files;
+	}
+
+	public void setFiles(List<File> files) {
+		this.files = files;
 	}
 
 	public int getId() {
@@ -41,5 +55,5 @@ public class Document {
 	public String toString() {
 		return "Document [id=" + id + ", name=" + name + ", description=" + description + "]";
 	}
-	
+
 }

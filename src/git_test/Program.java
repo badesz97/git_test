@@ -9,11 +9,6 @@ import javax.swing.JFrame;
 
 import git_test.entity.Company;
 
-/*
- * 
- * Change BC
- * 
- */
 public class Program {
 
 	public static void main(String[] args) {
