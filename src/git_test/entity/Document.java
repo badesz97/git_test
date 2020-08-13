@@ -52,7 +52,8 @@ public class Document {
 
 	@Override
 	public String toString() {
-		return "Document [id=" + id + ", name=" + name + ", description=" + description + "]";
+		return "Document [id=" + id + ", name=" + name + ", description=" + description + ", files=" + files + "]";
 	}
+	
 
 }
