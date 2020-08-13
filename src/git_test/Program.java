@@ -21,6 +21,7 @@ public class Program {
 		try {
 
 			System.out.println("Press enter for chosing a file.");
+			
 
 			String filename = File.separator + "tmp";
 			JFileChooser fc = new JFileChooser(new File(filename));
@@ -42,12 +43,16 @@ public class Program {
 			myReader.close();
 			
 			comp1.getDocument().getFiles().add(selFile);
+			comp1.getDocument().getFiles().add(selFile);
 			
 			System.out.println(comp1.getDocument().getFiles().size());
 		} catch (FileNotFoundException e) {
 			System.out.println("An error occurred.");
 			e.printStackTrace();
 		}
+		
+		//Printing out comp1.toConsole() after Files added
+		System.out.println(comp1.toString());
 		
 		//Adding file to companies documents
 	}
