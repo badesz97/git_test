@@ -1,4 +1,4 @@
-package git_test.entity;
+package com.szalai.spring.test.entity;
 
 import java.io.File;
 import java.util.ArrayList;

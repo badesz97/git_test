@@ -1,17 +1,47 @@
-package git_test;
+package com.szalai.spring.test;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.List;
 import java.util.Scanner;
 
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 
-import git_test.entity.*;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.CannotGetJdbcConnectionException;
+
+import com.szalai.spring.test.dao.FilesDao;
+import com.szalai.spring.test.entity.*;
 
 public class Program {
 
 	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("com/szalai/spring/test/beans/beans.xml");
+		
+		//Checking database connection from here ----------------------------------------
+		FilesDao filesDao = (FilesDao)context.getBean("filesDao");
+		try {
+			List<TestFile> files = filesDao.getFiles();
+			
+			for (TestFile file : files) {
+				System.out.println(file);
+			}
+			
+		}
+		catch (CannotGetJdbcConnectionException e) {
+			System.out.println("Can not get database connection.");
+		}
+		
+		catch (DataAccessException e) {
+			System.out.println(e.getMessage());
+			System.out.println(e.getClass());
+		}
+		
+		//to here ----------------------------------------------------------------------
+		
 		Company comp1 = new Company(1, "ForumDigital", "This is my company",
 				new Document(1, "Szerzodesek", "Ez egy leiras."));
 
@@ -45,8 +75,8 @@ public class Program {
 
 		// Printing out comp1.toConsole() after Files added
 		System.out.println(comp1.toString());
-
-		// Adding file to companies documents
+		
+		((ClassPathXmlApplicationContext)context).close();
 	}
 
 	private static void printContent(File file) {
